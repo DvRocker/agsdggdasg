@@ -20,7 +20,7 @@ const gif = require("gif-search");
 
 const client = new Discord.Client({disableEveryone: true});
 
-const prefix = "1";
+const prefix = "5";
 /////////////////////////
 ////////////////////////
 
@@ -80,7 +80,7 @@ client.on('message', async msg =>{
 ////////////////////////
 //////////////////////
 client.on('ready', () => {
-   client.user.setGame(" | 1help | ");
+   client.user.setGame(" | 5help | ");
 }); 
 /////////////////////////
 ////////////////////////
@@ -333,9 +333,9 @@ client.on('message', message => {
     if (message.content === '*general_commands') {
         let helpEmbed = new Discord.RichEmbed()
         .setTitle('**أوامر عامة...**')
-        .addField('*avatar', "افاتار الشخص المطلوب")
-        .addField('*gif', 'البحث عن جيف انت تطلبه')
-        .addField('*ping', 'معرفة ping البوت')
+        .addField('5avatar', "افاتار الشخص المطلوب")
+        .addField('5gif', 'البحث عن جيف انت تطلبه')
+        .addField('5ping', 'معرفة ping البوت')
       message.channel.send(helpEmbed);
     }
 });
