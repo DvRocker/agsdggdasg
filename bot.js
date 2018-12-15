@@ -319,18 +319,18 @@ client.on('message', message => {
         let helpEmbed = new Discord.RichEmbed()
         .setTitle('**أوامر الميوزك...**')
         .addField('5play', 'لتشغيل اغنية')
-        .addField('5join', 'دخول رومك الصوتي')
+        .addField('5vol', 'لتعلية الصوت')
 
         .addField('5skip', 'تخطي الأغنية')
         .addField('5pause', 'ايقاف الاغنية مؤقتا')
         .addField('5resume', 'تكملة الاغنية')
-        .setFooter('(*general_commands) لاظهار الاوامر العامة')
+        .setFooter('(5general_commands) لاظهار الاوامر العامة')
       message.channel.send(helpEmbed);
     }
 });
 
 client.on('message', message => {
-    if (message.content === '*general_commands') {
+    if (message.content === '5general_commands') {
         let helpEmbed = new Discord.RichEmbed()
         .setTitle('**أوامر عامة...**')
         .addField('5avatar', "افاتار الشخص المطلوب")
