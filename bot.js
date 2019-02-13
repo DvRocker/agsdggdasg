@@ -20,7 +20,7 @@ const gif = require("gif-search");
 
 const client = new Discord.Client({disableEveryone: true});
 
-const prefix = "5";
+const prefix = "4";
 /////////////////////////
 ////////////////////////
 
@@ -80,7 +80,7 @@ client.on('message', async msg =>{
 ////////////////////////
 //////////////////////
 client.on('ready', () => {
-   client.user.setGame(" | 5help | ");
+   client.user.setGame(" | 4help | ");
 }); 
 /////////////////////////
 ////////////////////////
@@ -315,29 +315,19 @@ function play(guild, song) {
 
 
 client.on('message', message => {
-    if (message.content === '5help') {
+    if (message.content === '4help') {
         let helpEmbed = new Discord.RichEmbed()
         .setTitle('**أوامر الميوزك...**')
-        .addField('5play', 'لتشغيل اغنية')
-        .addField('5vol', 'لتعلية الصوت')
+        .addField('4play', 'لتشغيل اغنية')
+        .addField('4vol', 'لتعلية الصوت')
 
-        .addField('5skip', 'تخطي الأغنية')
-        .addField('5pause', 'ايقاف الاغنية مؤقتا')
-        .addField('5resume', 'تكملة الاغنية')
-        .setFooter('(5general_commands) لاظهار الاوامر العامة')
+        .addField('4skip', 'تخطي الأغنية')
+        .addField('4pause', 'ايقاف الاغنية مؤقتا')
+        .addField('4resume', 'تكملة الاغنية')
       message.channel.send(helpEmbed);
     }
 });
 
-client.on('message', message => {
-    if (message.content === '5general_commands') {
-        let helpEmbed = new Discord.RichEmbed()
-        .setTitle('**أوامر عامة...**')
-        .addField('5avatar', "افاتار الشخص المطلوب")
-        .addField('5gif', 'البحث عن جيف انت تطلبه')
-        .addField('5ping', 'معرفة ping البوت')
-      message.channel.send(helpEmbed);
-    }
-});
+
 
 client.login(process.env.BOT_TOKEN);
